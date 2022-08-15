@@ -19,7 +19,7 @@ let auxiliar = arregloEnt[0];
 function mayor(arregloEnt){
     for(let i = 1; i<=arregloEnt.length-1 ; i++ ){
         if(arregloEnt[i]>auxiliar){
-            auxiliar = arregloEnt[i];
+            auxiliar = arreglo[i];
         }  
 }
 return auxiliar;
