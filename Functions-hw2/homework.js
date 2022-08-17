@@ -3,7 +3,7 @@ let arregloStr = ['a', 'b', 'c', 'd', 'e'];
 let indice = arregloStr.length;
 
 function imprimirArreglo(arregloStr){
-    for(let i=arregloStr.length-1; i >= 0; i--){ //inicia en 0 se detiene hasta que indice= la impresión de el producto en su ultima posiciómn
+    for(let i=arregloStr.length-1; i >= 0; i--){ 
         console.log(arregloStr[i]);
     }  
 }
@@ -106,9 +106,9 @@ let arreglo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function mitad(arreglo){
     let segundaMitad = [];
     let inicio = arreglo.length/2;
-    inicio = Math.floor(inicio); //Math.floor -> Función de js para redondear hacia abajo 
+    inicio = Math.floor(inicio); 
     for(i= inicio;i <= arreglo.length-1 ; i++){
-        segundaMitad.push(arreglo[i]); // .push -> Función de js añade uno o más elementos a la nueva array
+        segundaMitad.push(arreglo[i]); 
     }
     return segundaMitad
 }
@@ -156,10 +156,129 @@ function arreglos(){
 let result = arreglos();
 console.log(result);
 
+//EJERCICIO 9 función que pueda crear n elementos de la serie de fibonacci donde n esta dado por el argumento de la función 
 
+ let serieFib = 0;
 
-
-
-
-
-
+ function serieFibonacci(n){
+     let tot = 1;
+     let ant = ;
+     let aux = 0;
+     for(i=0; i<=n ; i++){
+         aux = tot
+       tot = ant + tot;
+       ant = aux;
+       console.log(tot)
+     }
+ return tot
+ }
+ 
+ let result = serieFibonacci(10);
+ console.log(result);
+ 
+ n=5
+ 
+ //EJERCICIO 10 función que recibe un string y regresa false si el string contiene al menos una letra mayúscula 
+ function mayus(str){
+     for(i=0;i<=str.length-1;i++){
+         if(str[i] == str[i].toUpperCase()){  
+             return true;
+         }
+     } 
+     return false;  
+ }
+ 
+ let result = mayus('lUis');
+ console.log(result);
+ 
+ //EJERCICIO 11 función que recibe un string y retorna true si la palabra dada es un palíndromo y false si no lo es 
+ 
+ let str = 'sals'
+ let nuevoStr1 = '';
+ let nuevoStr2 = '';
+ 
+ function palindromo(str){
+     for(i=0 ; i<=str.length-1 ; i++){
+         nuevoStr1 = nuevoStr1+str[i]
+         console.log(nuevoStr1)
+     } 
+     for(i=str.length-1 ; i>=0 ; i--){ 
+         nuevoStr2 = nuevoStr2+str[i]
+         console.log(nuevoStr2)
+     }
+     if(nuevoStr1==nuevoStr2){
+         return true;
+     }
+     return false;
+ } 
+ let result = palindromo('sals');
+ console.log(result);
+ 
+ 
+ //optimizando
+ let nuevoStr = '';
+ 
+ function palindromo(str){
+     str = str.replace(/ /g, ''); 
+     for(i=str.length-1 ; i>=0 ; i--){ 
+         nuevoStr = nuevoStr+str[i]
+         console.log(nuevoStr)
+     }
+     if(str==nuevoStr){
+         return true;
+     }   
+     return false;
+ } 
+ let result = palindromo('anita lava la tina');
+ console.log(result);
+ 
+ 
+ //EJERCICIO 12 función que recibe un string con varias palabras y cambia a mayus la primera letra de c/palabra
+ 
+ let arreglo = ['hola', 'moon', 'life', 'love', 'nature'];
+ 
+ function mayus(arreglo){
+     for(i=0; i<=arreglo.length-1 ; i++){
+         arreglo[i] = arreglo[i][0].toUpperCase() + arreglo[i].substr(1); // 
+     }
+     return arreglo
+ }
+ 
+ let result = mayus(arreglo);
+ console.log(result);
+ 
+ 
+ 
+ //EJERCICIO 13 función q recibe un string con múltiples palabras y regresa únicamente la palabra más larga de la oración
+ 
+ let str = 'hola comoo estassssss que onda';
+ str = str.split(' '); 
+ let auxiliar = str[0];
+ 
+ function mayor(str){
+     for(let i = 1; i<=str.length-1 ; i++ ){
+         if(str[i].length>auxiliar.length){
+             auxiliar = str[i];
+             console.log(auxiliar)
+         }  
+     }
+ return auxiliar;
+ }
+ let result = mayor(str);
+ console.log(result);
+ 
+ //EJERCICIO 14 
+ let arreglo = 'hola comoo estassssss que onda';
+ let cont = 0;
+ 
+ function elementoRecurrente(arreglo, referencia){
+     for ( i=0 ; i <= arreglo.length-1 ; i++){
+         if(arreglo[i] == referencia){ 
+             cont++
+         }
+     }
+     return cont
+ }
+ 
+ let result = elementoRecurrente(arreglo, 's');
+ console.log(result);
