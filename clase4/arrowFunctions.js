@@ -11,3 +11,13 @@ function saludarDos (prefijo, nombre){
     console.log(arguments);
 };
 saludarDos('cin', 'ruiz')
+
+
+const arrowFunction = () => { //hacerlo cuando tu código requiera más lógica
+    return 'HOLA'
+};
+console.log(arrowFunction())
+
+
+const arrowFunction = () => 'HOLA'; //return implicito si tu resultado queda en una sola línea hacerlo de esta forma 
+console.log(arrowFunction())
