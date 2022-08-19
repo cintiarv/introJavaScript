@@ -39,3 +39,39 @@ let numeros = [1,2,3,4,5];
 numeros.forEach(function(el, index)){
     
 }
+
+//ejemplo cuando se debe y no utilizar la arrow function
+//función normal
+const instrumento = {
+    nombre: 'guitarra',
+    tocar: function(){
+        console.log(`${this.nombre} está sonando`)
+    }
+}
+instrumento.tocar();
+
+//arrow funct, en este caso 'this' lo toma como undefined ya que la arrow function se basa en el contexto de declaración es decir, window 
+const instrumento = {
+    nombre: 'guitarra',
+    tocar: () => {
+        console.log(`${this.nombre} está sonando`)
+    }
+}
+instrumento.tocar();
+
+
+
+
+let numeros = [1,2,3,4,5,6,7,8,20];
+
+let numerosCuadrados = numeros.map(function(numero) { //la funció map recibe como parámetro una funnción anónima 
+    return numero*numero;
+});
+console.log(numerosCuadrados)
+
+//optimizando con arrowfunct
+
+let numeros = [1,2,3,4,5,6,7,8,20];
+let numerosCuadrados = numeros.map(numero =>numero*numero); //map crea un nuevo arregla con las caraceristicas dadas 
+console.log(numerosCuadrados)
+
