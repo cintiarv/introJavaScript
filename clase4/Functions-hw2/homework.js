@@ -8,7 +8,7 @@ function imprimirArreglo(arregloStr){
     }  
 }
 
-imprimirArreglo(arregloStr)
+imprimirArreglo(arregloStr)push
 
 
 //EJERCICIO2 función que recibe un arrgelo de números y devuelve el valor más grande que se encuentre en el arreglo
