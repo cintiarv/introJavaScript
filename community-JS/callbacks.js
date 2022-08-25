@@ -87,9 +87,7 @@ function map (array, callback){                 //Crear una función map que ace
     }
     return newArray                                              //devuelva el array final con el resultado de cada una de las llamadas al callback.
 }
-
 const numbersArray = [2,5,8,8]
-
 const numberDuplicated = (number) => number*2
 
 const numbersDuplicated = map(numbersArray,numberDuplicated)
@@ -195,14 +193,39 @@ function map (array, callback){
 }
 const nameInitial = map(namesArray,(name) => name[0])
 
-
 const koders = ['Manu Cabrera Rojas', 'Cin Ruiz Verdugo', 'Fanny Perez Leyva']
+
 
 const initials = map(koders, (koder)) => {
     const nameSplitted = koder.split(' ')
+    
     const initials = map(nameSplitted, nameInitial)
     const stringInitials = initials.join(' '); //de un arreglo lo regresa a un string 
     return stringInitials
 }
 
-console.log(initials)
+console.log(stringInitials)
+
+let namesArray = ['Manu Cabrera Rojas','Cintia Ruiz Verdugo','Fanny Perez Leyva']
+let str = namesArray.join()
+let split = str.split(',')
+console.log(split)
+
+function map (array, callback){                 
+    let newArray = []                                    
+    for(i=0; i<split.length; i++){              
+        const elementCurrent = split[i]; 
+        const newElement = callback(elementCurrent);              
+        newArray.push(newElement)                               
+    }
+    return newArray                                             
+}
+
+const nameInitial = map(split,(name) => name[0])
+
+console.log(nameInitial)
+
+
+let cin = ['hola soy cin'];
+cin = cin.split(' ');
+console.log(cin)
