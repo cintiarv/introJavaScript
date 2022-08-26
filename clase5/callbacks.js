@@ -92,7 +92,6 @@ let personas = [{
     edad: 20
 }];
 
-
 //término parsear, te piden datos específicose
 function parsearPersonas(personas){
     let personasParseadas = []//parseadas = transormadas
