@@ -12,3 +12,16 @@ console.log(atWay)
 function returnLast(arr) {
     return arr.at(-1);
 }
+
+
+//Retorna un UTF-16 code de cada letra. UTF-16 (16- bit Unicode Transformation Format) is a standard method of encoding Unicode character data
+let text = "HELLO WORLD";
+let char = text.charCodeAt(0);
+
+console.log(char)
+
+
+const icons = '☃★♲';
+
+console.log(icons.codePointAt(3));
+// expected output: "9733"

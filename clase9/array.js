@@ -19,14 +19,14 @@ console.log(otherArray)
 
 //frutas es un arreglo con 3 elementos de tipo string 
 const frutas = ['banana', 'manzana', 'fresa']
-function callback(itemActual){
+f
+unction callback(itemActual){
    return itemActual === 'fresa'
 }
 
 let arregloResultante = frutas.filter(callback);
 
 console.log(arregloResultante)
-
 
 //ej de filter con objeto 
 const users = [{username: 'aldo', password:'cruiz'}, {username:'cin', password:'pass*2023'}]

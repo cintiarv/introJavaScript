@@ -21,10 +21,44 @@ const autos = [
     {marca: 'Audi', modelo: 'A4',  year: 2016, precio: 30000, puertas: 4, color: 'Azul', transmision: 'automatico'}
 ];
 
-const result= autos.find(function(auto){
+/* const result= autos.find(function(auto){
 if(auto.marca=='BMW'){
     return auto;
 }
 })
 
-console.log(result)
+console.log(result);
+ */
+
+const mercedez= autos.find(function(auto){
+    if(auto.marca==='Mercedes Benz' && auto.year === 2018 && auto.modelo==='Clase C'){
+        return auto;
+    }
+    })
+    console.log(mercedez);
+
+
+    //filter
+    const frutas = ['pera', 'manzana', 'banana podrida', 'pera podrida'];
+
+    let result= frutas.filter(fruta =>{
+        if(fruta.includes('podrida') !== true){ //include es boleano
+            return fruta;
+        }
+    })
+
+    console.log(result)
+
+
+
+     //sintetizando 
+     const frutas = ['pera', 'manzana', 'banana podrida', 'pera podrida'];
+
+     let frutasLimpias= frutas.filter(fruta =>{
+         if(fruta.includes('podrida')){ //include es boleano
+             return false;
+         }
+         return true;
+     })
+ 
+     console.log(`Ahí esta en la canasta: ${frutasLimpias}`);

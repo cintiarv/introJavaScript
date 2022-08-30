@@ -14,7 +14,7 @@ const numeros = [10, 2, 3, 40, 33, 50]
 filter(numeros, pares) // [10,2 40, 50]
  */
 
-const numbers = [10, 2, 3, 40, 33, 50];
+const koders = [10, 2, 3, 40, 33, 50];
 
 function filter (array, callback){
     let newArray = [];
@@ -69,3 +69,62 @@ console.log(Peers);
 const numbers = [10, 2, 3, 40, 33, 50];
 const result = numbers.filter(numbers => numbers%2==0)
 console.log(result);
+
+
+//caso 2 //
+// ['Cin', 'Jonatan', 'Fanny', 'Manu'] -> ['Cin'] Los que inician con 'c'
+
+
+const koders = ['Cin', 'Jonatan', 'Fanny', 'Manu'];
+
+function filter (array, callback){
+    let newArray = [];
+    for(i=0; i < array.length ; i++){
+        const elementoRecurrente = array[i];
+        const isValid = callback(elementoRecurrente);
+        if(isValid){
+            newArray.push(elementoRecurrente);
+        }
+    }
+    return newArray;
+}
+
+const cb = koder => {  
+    if(koder.startsWith('C')==true){
+        return true;
+    }
+    return false;
+}
+
+const kodersInitialC = filter(koders, cb);
+
+console.log(kodersInitialC);
+
+
+//caso 3
+// ['Cin', 'Jonatan', 'Fanny', 'Manu'] -> ['Jonatan', 'Fanny', 'Manu'] Los que tienes A
+
+const koders = ['Cin', 'Jonatan', 'Fanny', 'Manu'];
+
+function filter (array, callback){
+    let newArray = [];
+    for(i=0; i < array.length ; i++){
+        const elementoRecurrente = array[i];
+        const isValid = callback(elementoRecurrente);
+        if(isValid){
+            newArray.push(elementoRecurrente);
+        }
+    }
+    return newArray;
+}
+
+const cb = koder => {  
+    if(koder.includes('a')==true){  
+        return true;
+    }
+    return false;
+}
+
+const kodersIncludesA = filter(koders, cb);
+
+console.log(kodersIncludesA);
