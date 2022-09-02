@@ -26,3 +26,13 @@ function apply (x,y){
 }
 
 const a = koders.reduce(0,2)
+
+
+//ejemplo
+const numeros = [1,2,3,4,5,6];
+let suma = numeros.reduce((acumulador, itemActual)=>{
+   acumulador += itemActual;  //el callback nos actualiza el valor del acumulador. Nos dice como queramos q lo reduzca
+    return acumulador;
+}, 0);
+
+console.log(suma);
