@@ -1,0 +1,46 @@
+form{
+    flex-direction: column;
+}
+
+input{
+    margin: 1 rem;
+    max-width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.button{
+    width: 100px;
+    margin-top: 30px;
+    &__return{
+        display: flex;
+        margin-left: auto;
+        transform: translateX(-300%);
+        margin-top: 40px;
+    }
+    &__task{
+        display: flex;
+        margin: auto;
+        margin-top: 40px;    
+        }
+}
+
+h1{
+    color:green;
+}
+h2{
+    text-align: center;
+    color: goldenrod;
+    margin-top: 30px;
+}
+
+.lista{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.list{
+    text-align: center;
+}

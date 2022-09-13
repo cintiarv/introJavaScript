@@ -1,8 +1,6 @@
-let string = 'Hello, World33!';
 function snake(str){
 for(i=1 ; i < str.length ; i++){
     elementoActual = str[i];
-    console.log(isLetter(elementoActual));
     if(isLetter(elementoActual) == false){
         continue;
     }
@@ -11,10 +9,12 @@ for(i=1 ; i < str.length ; i++){
     }
 }
 return str.toLowerCase();
-}
-
-console.log(snake(string.replaceAll(',','').replaceAll(' ','')));
+};
 
 function isLetter(char) {
     return (/[a-zA-Z]/).test(char)
   }
+
+console.log(snake('Hello, World!'.replaceAll(',','').replaceAll(' ','')));
+
+console.log(snake('snakeCase'));

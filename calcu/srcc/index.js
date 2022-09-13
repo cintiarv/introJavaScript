@@ -24,3 +24,6 @@ function calcu(resultado1,resultado2,resultado3,resultado4,resultado5,){
 }
 
 calcu(resultadoSuma,resultadoResta,resultadoMult,resultadoPot,resultadoDiv)
+
+
+

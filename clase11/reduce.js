@@ -21,11 +21,17 @@ const promedio = koders.reduce((acumulador, itemActual)=>{
 console.log(promedio);
 
 
-function apply (x,y){
-    return x+y
-}
+//another way with apply
+const koders = [{name:'cin', calif: 8}, {name:'fer', calif:9}, {name:'luis', calif:6}];
+let acc = 0;
 
-const a = koders.reduce(0,2)
+const sum = function apply (x,y){
+    console.log('x = ' + x + ' y = ' + y)
+    return x+=y.calif
+}
+const a = koders.reduce((acc,obj)=>acc+obj.calif,0)
+console.log(a);
+
 
 
 //ejemplo
