@@ -1,0 +1,67 @@
+body {
+  width: 50%;
+}
+
+form {
+  flex-direction: column;
+}
+
+input {
+  margin: 1 rem;
+  max-width: 70%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.button {
+  width: 100px;
+  margin-top: 30px;
+}
+.button__return {
+  display: flex;
+  margin-left: auto;
+  transform: translateX(-300%);
+  margin-top: 40px;
+}
+.button__task {
+  display: flex;
+  margin: auto;
+  margin-top: 40px;
+}
+
+h1 {
+  color: green;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(247, 202, 88);
+  margin-top: 40px;
+  margin-left: 70px;
+}
+
+.title_container {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.lista {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.list {
+  text-align: center;
+}
+
+.buttonX {
+  display: inline;
+}
+
+.title {
+  display: inline;
+  justify-content: center;
+  display: flex;
+}/*# sourceMappingURL=style.css.map */
